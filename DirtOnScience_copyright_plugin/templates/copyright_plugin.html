@@ -1,0 +1,30 @@
+<div class="DirtOnScience_copyright_plugin" style="height: 30px">
+  <span style="float:right; padding: 0px 0px 0px 0px">
+    <a data-toggle="popover"
+       data-placement="auto top"
+       data-html="true"
+       title="Image Source &amp; Copyright"
+       data-content="Source:
+		             {% if instance.source %}
+                       {% if instance.source_url %}
+                         <a href='{{ instance.source_url }}''>{{ instance.source }}</a>
+			           {% else %}
+			             {{ instance.source }}
+		               {% endif %}
+	                 {% else %}
+		               Unknown
+                     {% endif %}
+                     <br>
+                     License:
+                     {% if instance.source %}
+                       {% if instance.license_url %}
+                         <a href='{{ instance.license_url }}''>{{ instance.license }}</a>
+                       {% else %}
+                         {{ instance.license }}
+                       {% endif %}
+                     {% else %}
+                       Unknown
+                     {% endif %}"
+    >Copyright &copy;</a>
+  </span>
+</div>
